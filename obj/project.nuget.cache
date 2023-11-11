@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "ye7wnAOjyBzg++o+Oj0y6SQGsGM+2h8ELAV/fWU/9yS0xxNJYknjxD0i+2yX+FoDTqR/lNXrw/aPYuS1yFhIBA==",
+  "success": true,
+  "projectFilePath": "/Users/piotrbaranowski/Desktop/Software projects/airbnb/airbnb.csproj",
+  "expectedPackageFiles": [
+    "/Users/piotrbaranowski/.nuget/packages/microsoft.aspnetcore.openapi/7.0.10/microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
+    "/Users/piotrbaranowski/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/piotrbaranowski/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/Users/piotrbaranowski/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "/Users/piotrbaranowski/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "/Users/piotrbaranowski/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "/Users/piotrbaranowski/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
