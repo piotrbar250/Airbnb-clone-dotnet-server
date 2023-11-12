@@ -17,6 +17,7 @@ export default function Header() {
       <div className='relative flex items-center h-10 cursor-pointer my-auto'>
         <Image
           src='https://links.papareact.com/qd3'
+          // src='http://localhost:5100/api/image'
           layout='fill'
           objectFit='contain'
           objectPosition='left'
