@@ -71,6 +71,7 @@ export async function getStaticProps() {
   const exploreData = await fetch('https://mv15nw8s-5004.euw.devtunnels.ms/api/locations').then(
     (res) => res.json()
   );
+  //test
 
   const cardsData = await fetch('https://mv15nw8s-5004.euw.devtunnels.ms/api/types').then(
     res => res.json()
