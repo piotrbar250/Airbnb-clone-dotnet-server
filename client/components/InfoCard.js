@@ -5,6 +5,8 @@ import { HeartIcon } from '@heroicons/react/outline'
 
 
 function InfoCard({ img, location, title, description, star, price, total }) {
+
+  const randomNumber = Math.floor(Math.random() * 10000);
   return (
     <div className='flex py-7 px-2 border-b cursor-pointer hover:opacity-80 hover:shadow-lg transition duration-200 ease-out
       first:border-t
@@ -16,7 +18,7 @@ function InfoCard({ img, location, title, description, star, price, total }) {
             objectFit='cover'
             className='rounded-xl'
             loading='eager'
-            alt={img}
+            alt={randomNumber}
         />
         </div>
         
