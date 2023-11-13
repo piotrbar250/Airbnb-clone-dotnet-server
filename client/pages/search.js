@@ -14,7 +14,6 @@ function Search({searchResults}) {
   const formattedEndDate = format(new Date(endDate), 'dd MMMM yy')
   const range = `${formattedStartDate} - ${formattedEndDate}`
   return (
-    // <div className='flex justify-between flex-col h-screen'>
     <div>
         <Header placeholder={`${location} | ${range} | ${noOfGuests}`}/>
         <main className='flex'>
@@ -54,7 +53,7 @@ function Search({searchResults}) {
 export default Search
 
 export async function getServerSideProps(context){
-  const searchResults = await fetch('https://www.jsonkeeper.com/b/5NPS').then(
+  const searchResults = await fetch('https://mv15nw8s-5004.euw.devtunnels.ms/api/offers').then(
     (data) => data.json()
   )
 

@@ -68,11 +68,11 @@ export async function getStaticProps() {
   //   res => res.json()
   // )  
   
-  const exploreData = await fetch('https://www.jsonkeeper.com/b/4G1G').then(
+  const exploreData = await fetch('https://mv15nw8s-5004.euw.devtunnels.ms/api/locations').then(
     (res) => res.json()
   );
 
-  const cardsData = await fetch('https://www.jsonkeeper.com/b/VHHT').then(
+  const cardsData = await fetch('https://mv15nw8s-5004.euw.devtunnels.ms/api/types').then(
     res => res.json()
   )
 
