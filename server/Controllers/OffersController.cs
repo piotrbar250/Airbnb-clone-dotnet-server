@@ -8,7 +8,7 @@ public class OffersController : ControllerBase
     public async Task<ActionResult<string>> getLocations()
     {
         Console.WriteLine("a teraz");
-        string locations = System.IO.File.ReadAllText("data/offers.json");
+        string locations = System.IO.File.ReadAllText("Data/offers.json");
         return await Task.Run(() => locations);
     }    
 }
