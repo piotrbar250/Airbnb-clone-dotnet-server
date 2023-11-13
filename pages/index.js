@@ -51,7 +51,7 @@ export default function Home({ exploreData, cardsData }) {
           buttonText="Get Inspired"
         />
       </main>
-
+      
       <footer>
         <Footer />
       </footer>
@@ -60,30 +60,21 @@ export default function Home({ exploreData, cardsData }) {
 }
 
 export async function getStaticProps() {
-  console.log("hello");
-  // const exploreData = await fetch('http://localhost:5100/api/locations').then(
+  // const exploreData = await fetch('http://localhost:5004/api/locations').then(
   //   (res) => res.json()
   // );
 
-  // const cardsData = await fetch('http://localhost:5100/api/types').then(
+  // const cardsData = await fetch('http://localhost:5004/api/types').then(
   //   res => res.json()
-  // )
+  // )  
+  
+  const exploreData = await fetch('https://www.jsonkeeper.com/b/4G1G').then(
+    (res) => res.json()
+  );
 
-  const exploreData = [
-    {"img":"https://links.papareact.com/5j2","location":"London","distance":"45-minute drive"},
-    {"img":"https://links.papareact.com/1to","location":"Manchester","distance":"4.5-hour drive"},
-    {"img":"https://links.papareact.com/40m","location":"Liverpool","distance":"4.5-hour drive"},
-    {"img":"https://links.papareact.com/msp","location":"York","distance":"4-hour drive"},
-    {"img":"https://links.papareact.com/2k3","location":"Cardiff","distance":"45-minute drive"},
-    {"img":"https://links.papareact.com/ynx","location":"Birkenhead","distance":"4.5-hour drive"},
-    {"img":"https://links.papareact.com/kji","location":"Newquay","distance":"6-hour drive"},
-    {"img":"https://links.papareact.com/41m","location":"Hove","distance":"2-hour drive"}]
-
-  const cardsData = [
-    {"img":"https://links.papareact.com/2io","title":"Outdoor getaways"},
-    {"img":"https://links.papareact.com/q7j","title":"Unique stays"},
-    {"img":"https://links.papareact.com/s03","title":"Entire homes"},
-    {"img":"https://links.papareact.com/8ix","title":"Pet allowed"}]
+  const cardsData = await fetch('https://www.jsonkeeper.com/b/VHHT').then(
+    res => res.json()
+  )
 
   return {
     props: {
