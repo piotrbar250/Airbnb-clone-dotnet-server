@@ -56,7 +56,7 @@ function Search({searchResults}) {
 export default Search
 
 export async function getServerSideProps(context){
-  const searchResults = await fetch('https://mv15nw8s-5004.euw.devtunnels.ms/api/offers').then(
+  const searchResults = await fetch('https://3fwtbm1v-5004.euw.devtunnels.ms/api/offers').then(
     (data) => data.json()
   )
 

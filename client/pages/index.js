@@ -59,11 +59,11 @@ export default function Home({ exploreData, cardsData }) {
 
 export async function getStaticProps() {
 
-  const exploreData = await fetch('https://mv15nw8s-5004.euw.devtunnels.ms/api/locations').then(
+  const exploreData = await fetch('https://3fwtbm1v-5004.euw.devtunnels.ms/api/locations').then(
     (res) => res.json()
   );
 
-  const cardsData = await fetch('https://mv15nw8s-5004.euw.devtunnels.ms/api/types').then(
+  const cardsData = await fetch('https://3fwtbm1v-5004.euw.devtunnels.ms/api/types').then(
     res => res.json()
   )
 
