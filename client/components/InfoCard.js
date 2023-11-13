@@ -17,7 +17,7 @@ function InfoCard({ img, location, title, description, star, price, total }) {
             layout='fill'
             objectFit='cover'
             className='rounded-xl'
-            loading='eager'
+            priority={true}
             alt={randomNumber}
         />
         </div>

@@ -8,7 +8,7 @@ public class ImageController : ControllerBase
     public IActionResult GetImage()
     {
         Console.WriteLine("hello in image");
-        var imagePath = "offer_img".webp"; // Replace with your image path
+        var imagePath = "offer_img.webp"; // Replace with your image path
         var imageBytes = System.IO.File.ReadAllBytes(imagePath);
         return File(imageBytes, "image/webp");
     }
