@@ -45,6 +45,9 @@ function Search({searchResults}) {
 
           </section>
         </main>
+        
+
+        <img src={searchResults[1].img}/>
         <Footer/>
     </div>
   )
