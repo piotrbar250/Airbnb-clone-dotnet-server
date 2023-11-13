@@ -5,6 +5,6 @@
 
 module.exports = {
   images: {
-    domains: ['links.papareact.com', 'localhost'],
+    domains: ['links.papareact.com', 'localhost', 'mv15nw8s-5004.euw.devtunnels.ms'],
   }
 }
