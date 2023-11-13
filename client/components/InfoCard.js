@@ -17,13 +17,7 @@ function InfoCard({ img, location, title, description, star, price, total }) {
             className='rounded-xl'
         />
         </div>
-
-        {/* <div className='flex flex-col flex-grow pl-5'>
-            <div className='flex justify-between'>
-                <p className=''>{location}</p>
-                <HeartIcon className='h-7 cursor-pointer'/>
-            </div> 
-        </div> */}
+        
         <div className='flex flex-col flex-grow pl-4'>
             <div className='flex justify-between'>
                 <p>{location}</p>
@@ -47,20 +41,7 @@ function InfoCard({ img, location, title, description, star, price, total }) {
                 <p className='text-right font-extralight'>{total}</p>
               </div>
             </div>
-            
-            {/* <div className='flex justify-between'>
-              <div className='flex items-center'>
-                <StarIcon className='h-7 text-red-400'/>
-                {star}
-              </div>
-
-              <div>
-                <p>{price}</p>
-                <p>{total}</p>
-              </div>
-            </div> */}
-
-
+    
         </div>         
 
     </div>    

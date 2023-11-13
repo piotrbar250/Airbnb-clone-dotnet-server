@@ -16,4 +16,4 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-View a demo of this app [here](https://airbnb-clone-puce-six.vercel.app).
+View a demo of this app [here](https://airbnb-clone-with-dotnet-server.vercel.app/).
