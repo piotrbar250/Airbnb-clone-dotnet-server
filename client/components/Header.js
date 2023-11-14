@@ -45,7 +45,7 @@ export default function Header({placeholder}) {
 
     try{
       const response = await fetch('https://3fwtbm1v-5004.euw.devtunnels.ms/api/healthcheck', {signal: controller.signal})
-      clearTimeout(Id)
+      clearTimeout(timeoutId)
       if(response && response.ok){
         console.log('API is connected')
         return true
