@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Header from '@/components/Header'
 import Banner from '@/components/Banner'
 import SmallCard from '@/components/SmallCard'
+import SmallCardv2 from '@/components/SmallCardv2'
 import MediumCard from '@/components/MediumCard'
 import LargeCard from '@/components/LargeCard'
 import Footer from '@/components/Footer'
@@ -26,7 +27,7 @@ export default function Home({ exploreData, cardsData }) {
 
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
             {exploreData?.map(item => (
-              <SmallCard key={item.img} img={item.img} location={item.location} distance={item.distance} />
+              <SmallCardv2 key={item.img} img={item.img} location={item.location} distance={item.distance} />
             ))}
           </div>
         </section>

@@ -37,14 +37,30 @@ export default function Header({placeholder}) {
   const resetInput = () => {
     setSearchInput('')
   }
+
+  async function checkApiConnection(){
+    try {
+        const response = await fetch('https://3fwtbm1v-5004.euw.devtunnels.ms/api/offers');
+        if (response.ok) {
+            console.log("API is connected.");
+            return true
+        } else {
+            console.error("API connection failed.");
+            return false
+        }
+    } catch (error) {
+        console.error("Error checking API connection:", error);
+        return false
+    }
+}
+
   const search = () => {
-    // router.push({
-    //   pathname: '/search',
-    //   query: {
-    //     location: searchInput,
-        
-    //   }
-    // })
+    if(!checkApiConnection())
+    {
+      router.push({
+        pathname: '/pom',
+      })
+    }
     router.push({
       pathname: '/search',
       query: {
@@ -64,7 +80,6 @@ export default function Header({placeholder}) {
       <div onClick={() => router.push('/')}className='relative flex items-center h-10 cursor-pointer my-auto'>
         <Image
           src='https://links.papareact.com/qd3'
-          // src='http://localhost:5100/api/image'
           layout='fill'
           objectFit='contain'
           objectPosition='left'
