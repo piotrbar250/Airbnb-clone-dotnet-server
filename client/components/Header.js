@@ -38,38 +38,45 @@ export default function Header({placeholder}) {
     setSearchInput('')
   }
 
-  async function checkApiConnection(){
-    try {
-        const response = await fetch('https://3fwtbm1v-5004.euw.devtunnels.ms/api/offers');
-        if (response.ok) {
-            console.log("API is connected.");
-            return true
-        } else {
-            console.error("API connection failed.");
-            return false
-        }
-    } catch (error) {
-        console.error("Error checking API connection:", error);
+  async function checkApiConnection()
+  {
+    try{
+      const response = await fetch('http://localhost:5004/api/healthcheck')
+      
+      if(response && response.ok){
+        console.log('API is connected')
+        return true
+      }
+      else{
+        console.error('Erro checking API connection', error)
         return false
+      }
+    } catch(error){
+      console.error('Error checking API connection', error)
+      return false
     }
-}
+  }
 
   const search = () => {
-    if(!checkApiConnection())
-    {
-      router.push({
-        pathname: '/pom',
-      })
-    }
-    router.push({
-      pathname: '/search',
-      query: {
-        location: searchInput,
-        startDate: startDate.toISOString(),
-        endDate: endDate.toISOString(),
-        noOfGuests
-      },
-    })
+   
+    (async () => {
+      const status = await checkApiConnection()
+      if(status){
+        router.push({
+          pathname: '/search',
+          query: {
+            location: searchInput,
+            startDate: startDate.toISOString(),
+            endDate: endDate.toISOString(),
+            noOfGuests
+          },
+        })
+      }
+      else{
+        router.push('/error')
+      }
+
+    })()
   }
 
 
