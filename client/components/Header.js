@@ -40,9 +40,12 @@ export default function Header({placeholder}) {
 
   async function checkApiConnection()
   {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 5000)
+
     try{
-      const response = await fetch('https://3fwtbm1v-5004.euw.devtunnels.ms/api/healthcheck')
-      
+      const response = await fetch('https://3fwtbm1v-5004.euw.devtunnels.ms/api/healthcheck', {signal: controller.signal})
+      clearTimeout(Id)
       if(response && response.ok){
         console.log('API is connected')
         return true
@@ -52,6 +55,7 @@ export default function Header({placeholder}) {
         return false
       }
     } catch(error){
+      clearTimeout(timeoutId)
       console.error('Error checking API connection', error)
       return false
     }
