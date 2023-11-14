@@ -41,7 +41,7 @@ export default function Header({placeholder}) {
   async function checkApiConnection()
   {
     try{
-      const response = await fetch('http://localhost:5004/api/healthcheck')
+      const response = await fetch('https://3fwtbm1v-5004.euw.devtunnels.ms/api/healthcheck')
       
       if(response && response.ok){
         console.log('API is connected')
