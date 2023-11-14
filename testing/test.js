@@ -32,5 +32,4 @@ function performApiCheck() {
     })();
 }
 
-// Call this function when you want to check the API connection
 performApiCheck();
